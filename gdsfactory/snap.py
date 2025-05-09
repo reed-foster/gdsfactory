@@ -39,8 +39,8 @@ def assert_on_grid(
         raise ValueError(f"{x} needs to be on {pm}pm grid and should be {x_grid}")
 
 
-assert_on_1nm_grid = partial(assert_on_grid, pm=1)
-assert_on_2nm_grid = partial(assert_on_grid, pm=2)
+assert_on_1nm_grid = partial(assert_on_grid, pm=1000)
+assert_on_2nm_grid = partial(assert_on_grid, pm=2000)
 
 
 def assert_on_2x_grid(x: float) -> None:

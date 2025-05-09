@@ -36,7 +36,7 @@ def assert_on_grid(
 ) -> None:
     x_grid = snap_to_grid(x, pm=pm, grid_factor=grid_factor)
     if not np.isclose(x_grid, x, rtol=0).all():
-        raise ValueError(f"{x} needs to be on 1nm grid and should be {x_grid}")
+        raise ValueError(f"{x} needs to be on {pm}pm grid and should be {x_grid}")
 
 
 assert_on_1nm_grid = partial(assert_on_grid, pm=1)
